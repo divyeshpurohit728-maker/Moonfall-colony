@@ -1,0 +1,352 @@
+[
+  {
+    "id": "shady_travelers",
+    "character": "Shady Scavenger",
+    "prompt": "An unmarked ship offers cheap labor and a suspiciously large crate of spare parts. Their crew keeps asking where we store the oxygen.",
+    "yes": { "text": "Open the airlock", "effect": { "population": 10, "funding": 7, "alien_relations": -9 }, "random_outcomes": [{ "chance": 0.22, "text": "They were pirates. They left a handwritten invoice for the oxygen they stole.", "effect": { "funding": -12, "alien_relations": -8 } }] },
+    "no": { "text": "Lock it down", "effect": { "funding": -4, "resources": 3, "alien_relations": 5 } }
+  },
+  {
+    "id": "alien_gambling",
+    "character": "Casino Host Zxrr",
+    "prompt": "An alien casino has opened in the colony. The house accepts lunar crystals and claims its dice are legally sentient.",
+    "yes": { "text": "Place a careful bet", "effect": { "funding": 12, "population": -4, "alien_relations": 5 }, "random_outcomes": [{ "chance": 0.24, "text": "The dice unionized mid-game and seized the table. Your winnings are now a labor dispute.", "effect": { "funding": -10, "population": -3 } }] },
+    "no": { "text": "Close the casino", "effect": { "funding": -3, "resources": 4, "alien_relations": -5 } }
+  },
+  {
+    "id": "experimental_supplements",
+    "character": "Dr. Zara Chen",
+    "prompt": "A new supplement promises better focus during long shifts. The label lists moon dust, vitamins, and one ingredient marked simply: probably fine.",
+    "yes": { "text": "Run a small trial", "effect": { "population": 5, "resources": -7, "funding": -3 }, "random_outcomes": [{ "chance": 0.18, "text": "Half the volunteers laugh continuously. The other half publish a very cheerful incident report.", "effect": { "population": -8, "resources": -4 } }] },
+    "no": { "text": "Keep the current diet", "effect": { "resources": 4, "funding": 3, "population": -4 } }
+  },
+  {
+    "id": "hydroponic_crops",
+    "character": "Grower Maria Okeke",
+    "prompt": "A hydroponics rig can grow leafy greens twice as fast, but it wants a third of our clean water and a technician who keeps calling lettuce a colleague.",
+    "yes": { "text": "Install the new rig", "effect": { "resources": 10, "funding": -7, "population": 3 }, "random_outcomes": [{ "chance": 0.16, "text": "The nutrient pump floods one bay. The lettuce survives and requests a transfer.", "effect": { "resources": -8, "population": -2 } }] },
+    "no": { "text": "Keep the old beds", "effect": { "resources": -4, "funding": 5, "population": -3 } }
+  },
+  {
+    "id": "livestock",
+    "character": "Colonist Bob",
+    "prompt": "Bob wants to raise two miniature goats for milk. They have already eaten the emergency crop schedule and one corner of the colony charter.",
+    "yes": { "text": "Make room for goats", "effect": { "resources": -8, "population": 5, "funding": -3 }, "random_outcomes": [{ "chance": 0.19, "text": "A goat escapes into the greenhouse and eats three months of salad in eleven minutes.", "effect": { "resources": -10, "population": -2 } }] },
+    "no": { "text": "Send them back to Earth", "effect": { "resources": 4, "funding": -5, "population": -2 } }
+  },
+  {
+    "id": "water_mining",
+    "character": "Prospector Sato",
+    "prompt": "A drill team found a clean ice seam beneath the ridge. The sample is promising; the map was drawn on a napkin during a rover race.",
+    "yes": { "text": "Fund the drilling rig", "effect": { "resources": 12, "funding": -8, "population": -2 }, "random_outcomes": [{ "chance": 0.2, "text": "The drill reaches ice, then a pocket of abrasive dust. The water is excellent; the machinery is not.", "effect": { "resources": 5, "funding": -9 } }] },
+    "no": { "text": "Keep the seam untouched", "effect": { "funding": 4, "resources": -5, "alien_relations": 3 } }
+  },
+  {
+    "id": "earth_shipments",
+    "character": "Earth Logistics",
+    "prompt": "Earth can send a supply pallet next month. It costs a fortune, and the manifest lists three crates as assorted mystery cables.",
+    "yes": { "text": "Order the pallet", "effect": { "resources": 13, "funding": -10, "population": 2 }, "random_outcomes": [{ "chance": 0.15, "text": "A customs delay swaps our water filters for commemorative flags. The flags are very nice.", "effect": { "resources": -8, "funding": -4 } }] },
+    "no": { "text": "Stretch our reserves", "effect": { "funding": 4, "resources": -7, "alien_relations": 2 } }
+  },
+  {
+    "id": "government_funding",
+    "character": "Senator Williams",
+    "prompt": "A government grant will cover a new habitat wing if we promise weekly progress calls and one tasteful plaque per square meter.",
+    "yes": { "text": "Accept the grant", "effect": { "funding": 14, "population": 5, "resources": -7, "alien_relations": -4 }, "random_outcomes": [{ "chance": 0.17, "text": "The plaque contractor invoices us for the wall behind the plaque. A committee is reviewing the wall.", "effect": { "funding": -8 } }] },
+    "no": { "text": "Decline the conditions", "effect": { "funding": -5, "resources": 4, "alien_relations": 5 } }
+  },
+  {
+    "id": "alien_communication",
+    "character": "Alien Ambassador Vell",
+    "prompt": "The aliens offer a direct translation channel. Their first message is either a generous trade proposal or a very detailed complaint about our Moon naming conventions.",
+    "yes": { "text": "Open the channel", "effect": { "funding": 6, "alien_relations": 9, "resources": -3 }, "random_outcomes": [{ "chance": 0.16, "text": "The translator mistakes a greeting for a binding purchase of twelve ceremonial spoons.", "effect": { "funding": -7, "alien_relations": -5 } }] },
+    "no": { "text": "Wait for a safer translation", "effect": { "funding": 4, "alien_relations": -8, "resources": 2 } }
+  },
+  {
+    "id": "security_upgrade",
+    "character": "Chief of Security Hayes",
+    "prompt": "A sensor spotted movement near the perimeter. Security wants a costly upgrade; the sensor's manual says it can also detect determined squirrels.",
+    "yes": { "text": "Install the new sensors", "effect": { "funding": -9, "resources": -4, "population": 4, "alien_relations": -4 } },
+    "no": { "text": "Keep the current patrols", "effect": { "funding": 5, "population": -3, "alien_relations": 3 } }
+  },
+  {
+    "id": "colony_expansion",
+    "character": "Habitat Planner Tom",
+    "prompt": "There is room to expand the habitat. The new wing adds beds and privacy, but its current blueprint includes a hallway that ends at a wall.",
+    "yes": { "text": "Build the new wing", "effect": { "population": 8, "resources": -9, "funding": -5 }, "random_outcomes": [{ "chance": 0.14, "text": "A support frame buckles. The hallway now ends at a different wall.", "effect": { "population": -6, "resources": -7 } }] },
+    "no": { "text": "Keep the footprint small", "effect": { "funding": 5, "resources": 4, "population": -5 } }
+  },
+  {
+    "id": "mars_exchange",
+    "character": "Mars Colony Liaison",
+    "prompt": "Mars offers food in exchange for repair parts. Their cargo launch window is short, and their pilot has never seen a window that opens outward.",
+    "yes": { "text": "Trade repair parts", "effect": { "resources": 10, "funding": -6, "alien_relations": 3 }, "random_outcomes": [{ "chance": 0.16, "text": "The shipment arrives full of dehydrated birthday cake. Mars says the real food is on the next launch.", "effect": { "resources": -6, "funding": -3 } }] },
+    "no": { "text": "Keep our spare parts", "effect": { "resources": -4, "funding": 5, "alien_relations": -3 } }
+  },
+  {
+    "id": "radiation_shield",
+    "character": "Dr. James Adeyemi",
+    "prompt": "Radiation readings are climbing. We can add shielding around the sleeping quarters or move the crew to a smaller, very noisy storage module.",
+    "yes": { "text": "Add the shielding", "effect": { "resources": -8, "funding": -5, "population": 4 } },
+    "no": { "text": "Move the crew temporarily", "effect": { "population": -6, "resources": 5, "funding": 3 } }
+  },
+  {
+    "id": "solar_storm",
+    "character": "Weather Station A-3",
+    "prompt": "A solar storm will hit in two days. The shelter plan uses extra supplies; skipping it keeps the power bank full but leaves the greenhouse exposed.",
+    "yes": { "text": "Shelter the crew", "effect": { "resources": -7, "funding": -3, "population": 4 }, "random_outcomes": [{ "chance": 0.16, "text": "A backup inverter trips during the storm. The crew is safe, and the lights now blink in Morse code.", "effect": { "resources": -6, "funding": -2 } }] },
+    "no": { "text": "Ride it out", "effect": { "funding": 4, "resources": -8, "population": -3 } }
+  },
+  {
+    "id": "oxygen_system",
+    "character": "Engineer Lisa Moreau",
+    "prompt": "The oxygen scrubber is running hot. A replacement is expensive; a repair is cheap and comes with the engineer's assurance that the noise is normal.",
+    "yes": { "text": "Replace the scrubber", "effect": { "resources": -8, "funding": -7, "population": 4 } },
+    "no": { "text": "Patch the old unit", "effect": { "funding": 5, "population": -5, "resources": -3 } }
+  },
+  {
+    "id": "overcrowding",
+    "character": "Resident Coordinator Mike",
+    "prompt": "The sleeping quarters are crowded. We can convert the gym into bunks or offer a funded return flight to a few volunteers.",
+    "yes": { "text": "Build temporary bunks", "effect": { "population": 7, "resources": -8, "funding": -3 } },
+    "no": { "text": "Offer return flights", "effect": { "population": -8, "funding": 5, "resources": 3 } }
+  },
+  {
+    "id": "scientists",
+    "character": "Dr. Smith's Research Team",
+    "prompt": "Scientists want to study a strange mineral that hums when nobody is looking directly at it. The lab needs supplies and a strict no-humming policy.",
+    "yes": { "text": "Approve the study", "effect": { "funding": 6, "resources": -6, "alien_relations": -4 }, "random_outcomes": [{ "chance": 0.2, "text": "The mineral powers a lab lamp for three days, then hums the colony anthem in a new key.", "effect": { "funding": 6, "alien_relations": 3 } }] },
+    "no": { "text": "Seal the sample case", "effect": { "resources": 4, "funding": -3, "alien_relations": 5 } }
+  },
+  {
+    "id": "engineers",
+    "character": "Engineer Tom Alvarez",
+    "prompt": "The maintenance team can modernize the water pumps. The upgrade saves supplies later, but will take a week and one very specific wrench from Earth.",
+    "yes": { "text": "Upgrade the pumps", "effect": { "resources": -6, "funding": -4, "population": 3 } },
+    "no": { "text": "Keep the old pumps running", "effect": { "resources": -5, "funding": 4, "population": -3 } }
+  },
+  {
+    "id": "rescue_astronauts",
+    "character": "Mission Control",
+    "prompt": "A two-person crew is stranded near our landing zone. Their ship has supplies but its navigation system keeps announcing the wrong planet.",
+    "yes": { "text": "Bring them inside", "effect": { "population": 4, "resources": -7, "funding": 3 }, "random_outcomes": [{ "chance": 0.16, "text": "One astronaut is a brilliant mechanic. The other has been narrating every repair like a sports final.", "effect": { "resources": 7, "population": 2 } }] },
+    "no": { "text": "Send a remote supply pod", "effect": { "resources": -3, "funding": -5, "population": -2 } }
+  },
+  {
+    "id": "politician_visit",
+    "character": "Senator Johnson",
+    "prompt": "A senator offers a funding boost in exchange for a guided tour and a promise not to mention the airlock incident on camera.",
+    "yes": { "text": "Host the senator", "effect": { "funding": 12, "resources": -4, "alien_relations": -5 } },
+    "no": { "text": "Decline the visit", "effect": { "funding": -5, "resources": 3, "alien_relations": 5 } }
+  },
+  {
+    "id": "corporate_sponsor",
+    "character": "CEO Martinez",
+    "prompt": "A corporation will bankroll our next shipment for exclusive rights to every discovery. Their contract defines discovery to include new sandwich combinations.",
+    "yes": { "text": "Take the sponsor deal", "effect": { "funding": 15, "resources": 3, "alien_relations": -9 }, "random_outcomes": [{ "chance": 0.17, "text": "The sponsor claims ownership of the colony's algae recipe. The recipe is mostly water and a secret.", "effect": { "funding": -10, "resources": -4 } }] },
+    "no": { "text": "Stay independent", "effect": { "funding": -6, "resources": 4, "alien_relations": 6 } }
+  },
+  {
+    "id": "smugglers",
+    "character": "Smuggler Jake",
+    "prompt": "A smuggler offers black-market batteries at half price. He says they're new, though every battery is stamped with a different year.",
+    "yes": { "text": "Buy the batteries", "effect": { "resources": 8, "funding": -5, "alien_relations": -4 }, "random_outcomes": [{ "chance": 0.2, "text": "One battery starts playing a message from a ship that has not launched yet.", "effect": { "resources": -9, "funding": -4 } }] },
+    "no": { "text": "Report the offer", "effect": { "funding": 4, "resources": -5, "alien_relations": 4 } }
+  },
+  {
+    "id": "alien_traders",
+    "character": "Trader Orro-of-Six",
+    "prompt": "An alien trader offers rare filter mesh for water and a modest fee. They insist our currency is “delightfully flat.”",
+    "yes": { "text": "Make the trade", "effect": { "resources": 9, "funding": -5, "alien_relations": 6 }, "random_outcomes": [{ "chance": 0.18, "text": "The mesh is excellent. The trader also leaves with our entire collection of novelty coins.", "effect": { "funding": -6, "alien_relations": -3 } }] },
+    "no": { "text": "Keep our current filters", "effect": { "funding": 4, "resources": -5, "alien_relations": -6 } }
+  },
+  {
+    "id": "alien_technology",
+    "character": "Alien Researcher T'Kel",
+    "prompt": "A recovered alien device could improve power storage. It is warm, softly glowing, and labeled in a language that may be warning us about fingerprints.",
+    "yes": { "text": "Study the device", "effect": { "funding": 5, "resources": -6, "alien_relations": -5 }, "random_outcomes": [{ "chance": 0.2, "text": "The device charges a battery bank, then politely refuses to work for anyone wearing shoes.", "effect": { "resources": 10, "alien_relations": 4 } }] },
+    "no": { "text": "Return it to the aliens", "effect": { "funding": -3, "resources": 4, "alien_relations": 7 } }
+  },
+  {
+    "id": "mysterious_artifacts",
+    "character": "Archaeologist Dr. Lee",
+    "prompt": "A buried lunar artifact is sending a signal from beneath the oldest crater. The aliens ask us not to dig; the archaeologist asks us not to tell the aliens.",
+    "yes": { "text": "Excavate the site", "effect": { "funding": 7, "resources": -5, "alien_relations": -8 }, "random_outcomes": [{ "chance": 0.18, "text": "The artifact opens and projects a map. It is upside down and includes our cafeteria.", "effect": { "funding": 8, "alien_relations": -3 } }] },
+    "no": { "text": "Leave it buried", "effect": { "resources": 4, "funding": -3, "alien_relations": 6 } }
+  },
+  {
+    "id": "lunar_weather",
+    "character": "Weather Station A-3",
+    "prompt": "A regional dust front is heading toward the colony. The forecast is clear about the dust and vague about the part called “sideways.”",
+    "yes": { "text": "Seal the outer systems", "effect": { "resources": -6, "funding": -3, "population": 4 } },
+    "no": { "text": "Keep normal operations", "effect": { "funding": 4, "resources": -7, "population": -3 } }
+  },
+  {
+    "id": "repair_robots",
+    "character": "Robot Engineer 6B",
+    "prompt": "A batch of maintenance robots can take over night repairs. They are efficient, but have formed a book club that only reads warning labels.",
+    "yes": { "text": "Deploy the robots", "effect": { "resources": -6, "funding": -5, "population": 5 }, "random_outcomes": [{ "chance": 0.17, "text": "The robots repair the pump and alphabetize every label in the habitat. Nobody can find the emergency exit instructions.", "effect": { "resources": -4, "population": -3 } }] },
+    "no": { "text": "Keep repairs human-led", "effect": { "funding": 5, "resources": -4, "population": -4 } }
+  },
+  {
+    "id": "black_market",
+    "character": "Black Market Dealer",
+    "prompt": "A hidden market sells medical supplies and suspiciously fresh coffee. The dealer accepts credits, favors, or one very good secret.",
+    "yes": { "text": "Buy the medical kit", "effect": { "resources": 8, "funding": -6, "alien_relations": -3 }, "random_outcomes": [{ "chance": 0.18, "text": "The kit is real. The coffee is a tiny alien plant that has started following the medic.", "effect": { "resources": 3, "alien_relations": -5 } }] },
+    "no": { "text": "Shut the market down", "effect": { "funding": 4, "resources": -4, "population": -3 } }
+  },
+  {
+    "id": "entertainment_night",
+    "character": "Colonist Sarah Kim",
+    "prompt": "The crew wants a zero-gravity movie night. The projector works, but the only film file is a six-hour documentary about printer maintenance.",
+    "yes": { "text": "Host the movie night", "effect": { "population": 5, "resources": -4, "funding": -3 } },
+    "no": { "text": "Save power for operations", "effect": { "resources": 4, "funding": 3, "population": -5 } }
+  },
+  {
+    "id": "labor_dispute",
+    "character": "Union Leader Imani",
+    "prompt": "The night shift wants safer hours and a real day off. The current schedule has a day off listed as “Tuesday, if Tuesday happens.”",
+    "yes": { "text": "Negotiate a new rota", "effect": { "population": 5, "funding": -7, "resources": -3 } },
+    "no": { "text": "Keep the current schedule", "effect": { "funding": 5, "population": -7, "resources": 3 } }
+  },
+  {
+    "id": "colony_election",
+    "character": "Election Committee",
+    "prompt": "It is time for a colony election. The two leading candidates are a botanist and a ballot box with suspiciously strong polling numbers.",
+    "yes": { "text": "Hold a public vote", "effect": { "population": 5, "funding": -5, "alien_relations": 4 }, "random_outcomes": [{ "chance": 0.15, "text": "The ballot box wins by a landslide. It promises to reduce paperwork by eliminating paper.", "effect": { "funding": -5, "population": -2 } }] },
+    "no": { "text": "Appoint an interim council", "effect": { "funding": 5, "population": -4, "alien_relations": -6 } }
+  },
+  {
+    "id": "neighboring_colony",
+    "character": "Lunar Settlement Kestrel",
+    "prompt": "Kestrel's air recycler is failing. They want our spare filters now and promise to repay us after their next shipment. Their next shipment has been next week for six months.",
+    "yes": { "text": "Send the filter crate", "effect": { "resources": -8, "funding": -4, "alien_relations": 6 }, "random_outcomes": [{ "chance": 0.18, "text": "Kestrel repays us in rare ice. Their accountant also sends a handwritten apology.", "effect": { "resources": 10, "funding": 4 } }] },
+    "no": { "text": "Protect our own reserves", "effect": { "resources": 5, "funding": 3, "alien_relations": -7 } }
+  },
+  {
+    "id": "moon_tourism",
+    "character": "Director of Tourism",
+    "prompt": "Earth wants to send the first luxury tour group. Guests expect low gravity, high luxury, and a quick selfie outside the habitat.",
+    "yes": { "text": "Open the observation deck", "effect": { "funding": 13, "resources": -8, "population": 3, "alien_relations": -4 }, "random_outcomes": [{ "chance": 0.22, "text": "A guest livestreams the airlock code. The clip gets twelve million views before security spots it.", "effect": { "funding": -8, "resources": -6 } }] },
+    "no": { "text": "Keep the habitat private", "effect": { "funding": -5, "resources": 5, "alien_relations": 4 } }
+  },
+  {
+    "id": "crater_sanctuary",
+    "character": "Council of Many Faiths",
+    "prompt": "Several groups want the same crater for a reflection garden. Their opening ceremony requires one shared loudspeaker and six incompatible playlists.",
+    "yes": { "text": "Build a shared sanctuary", "effect": { "population": 4, "funding": -6, "alien_relations": -7 } },
+    "no": { "text": "Keep the crater a science site", "effect": { "funding": 4, "resources": 3, "population": -3, "alien_relations": 5 } }
+  },
+  {
+    "id": "nurse_ai_patch",
+    "character": "NURSE-7, Colony Medical AI",
+    "prompt": "The medical AI diagnoses everyone with insufficient moon. Its old version thinks bandages are a food group; its new version has started billing the patients.",
+    "yes": { "text": "Install the rollback", "effect": { "resources": -6, "funding": -4, "population": 5 } },
+    "no": { "text": "Keep the new model online", "effect": { "funding": 4, "resources": 3, "population": -5 } }
+  },
+  {
+    "id": "ice_mining_licence",
+    "character": "Helix Extraction Corp.",
+    "prompt": "Helix offers a large advance for exclusive rights to a polar ice deposit. Their contract defines exclusive as until a lawyer gets bored.",
+    "yes": { "text": "Sign the extraction rights", "effect": { "funding": 15, "resources": 3, "alien_relations": -9 }, "random_outcomes": [{ "chance": 0.2, "text": "The deposit is sacred to nearby aliens. Helix's survey drone is returned in several pieces.", "effect": { "funding": -12, "alien_relations": -8 } }] },
+    "no": { "text": "Keep the ice in public hands", "effect": { "funding": -5, "resources": 6, "alien_relations": 4 } }
+  },
+  {
+    "id": "solar_sail_lab",
+    "character": "Dr. Okafor, Flight Dynamics",
+    "prompt": "A solar-sail test could make future cargo runs cheaper. The prototype is stadium-sized and currently tied to a very nervous delivery tug.",
+    "yes": { "text": "Fund the test launch", "effect": { "funding": -8, "resources": -5, "alien_relations": 5 }, "random_outcomes": [{ "chance": 0.2, "text": "The sail catches sunlight perfectly. Earth agrees to cover part of next month's freight bill.", "effect": { "funding": 14, "resources": 4 } }] },
+    "no": { "text": "Keep cargo on proven engines", "effect": { "funding": 5, "resources": -3, "alien_relations": -4 } }
+  },
+  {
+    "id": "moonquake_retrofit",
+    "character": "Seismic Monitor M-4",
+    "prompt": "A moonquake swarm rattles the south habitat. Engineers can reinforce the supports, or evacuate and hope the next tremor lands somewhere less embarrassing.",
+    "yes": { "text": "Brace the south habitat", "effect": { "resources": -11, "funding": -5, "population": 3 }, "random_outcomes": [{ "chance": 0.17, "text": "The final brace reveals a cracked coolant pipe. The repair crew calls the timing technically helpful.", "effect": { "resources": -7, "population": -4 } }] },
+    "no": { "text": "Evacuate the south wing", "effect": { "funding": 4, "resources": -6, "population": -6 } }
+  },
+  {
+    "id": "orbital_debris",
+    "character": "Traffic Control",
+    "prompt": "A cloud of old satellite panels crosses our landing corridor. A tug can clear the path, but it burns fuel reserved for the next cargo window.",
+    "yes": { "text": "Dispatch the tug", "effect": { "resources": -8, "funding": -5, "population": 4 } },
+    "no": { "text": "Delay the cargo window", "effect": { "resources": -5, "funding": 4, "population": -4 } }
+  },
+  {
+    "id": "crater_school",
+    "character": "Teacher Nia Patel",
+    "prompt": "The kids outgrew the storage-closet school. Their plan is orbital mechanics, lunar gardening, and a formal petition to remove algebra.",
+    "yes": { "text": "Convert the spare lab", "effect": { "population": 6, "resources": -7, "funding": -4 }, "random_outcomes": [{ "chance": 0.16, "text": "The students grow edible algae for the cafeteria. The algebra petition remains under review.", "effect": { "resources": 9, "population": 2 } }] },
+    "no": { "text": "Keep the lab operational", "effect": { "funding": 5, "resources": 4, "population": -5 } }
+  },
+  {
+    "id": "broadcast_rights",
+    "character": "Earthside Media Network",
+    "prompt": "A network offers a live reality-show deal. They want dramatic music and veto power over scenes where people calmly maintain equipment.",
+    "yes": { "text": "Sell the broadcast rights", "effect": { "funding": 12, "resources": -4, "alien_relations": -6 } },
+    "no": { "text": "Keep colony life off-camera", "effect": { "funding": -6, "population": 3, "alien_relations": 5 } }
+  },
+  {
+    "id": "earth_recall_notice",
+    "character": "Earth Command",
+    "prompt": "Earth recalls eight specialists to help with a crisis back home. Their replacements arrive in four months, assuming the transfer paperwork gets its own transfer paperwork.",
+    "yes": { "text": "Release the specialists", "effect": { "population": -8, "resources": 7, "funding": 5 } },
+    "no": { "text": "Keep the crew on station", "effect": { "population": 3, "resources": -8, "funding": -6 } }
+  },
+  {
+    "id": "alien_garden_exchange",
+    "character": "Ambassador Vell-of-Rain",
+    "prompt": "The aliens offer a living garden that filters air and water. It only grows under their music, which sounds like a kettle discovering jazz.",
+    "yes": { "text": "Accept the garden and playlist", "effect": { "resources": 9, "alien_relations": 8, "funding": -5 }, "random_outcomes": [{ "chance": 0.2, "text": "The garden blooms, then serenades the night shift at a volume usually reserved for launch alarms.", "effect": { "population": -4, "resources": 5 } }] },
+    "no": { "text": "Stick with human-grown algae", "effect": { "resources": -5, "funding": 4, "alien_relations": -6 } }
+  },
+  {
+    "id": "lunar_artists",
+    "character": "The Crater Collective",
+    "prompt": "Artists want to paint a mural across the habitat's radiation shield. Their beautiful draft currently covers the access-hatch label.",
+    "yes": { "text": "Commission the mural", "effect": { "population": 5, "resources": -4, "funding": -5, "alien_relations": 4 } },
+    "no": { "text": "Keep the shield unpainted", "effect": { "funding": 4, "population": -4, "alien_relations": -5 } }
+  },
+  {
+    "id": "colony_constitution",
+    "character": "Constitutional Assembly",
+    "prompt": "Colonists want a binding charter before the next election. The draft guarantees every resident a vote and gives the commander emergency authority unless it is inconvenient.",
+    "yes": { "text": "Ratify the charter", "effect": { "population": 4, "funding": -7, "alien_relations": 5 } },
+    "no": { "text": "Keep the current command structure", "effect": { "funding": 8, "population": -4, "alien_relations": -7 } }
+  },
+  {
+    "id": "medical_quarantine",
+    "character": "Chief Medic Alvarez",
+    "prompt": "A new cough spreads through the sleeping quarters. Quarantine disrupts two shifts; skipping it keeps the oxygen plant staffed today.",
+    "yes": { "text": "Quarantine the affected wing", "effect": { "resources": -7, "population": -2, "funding": -4 } },
+    "no": { "text": "Keep every shift running", "effect": { "population": -8, "resources": 3, "funding": 3 } }
+  },
+  {
+    "id": "robot_union",
+    "character": "Maintenance Union 8B",
+    "prompt": "The maintenance crew wants repair bots treated as coworkers, not equipment. The bots counterpropose better charging outlets.",
+    "yes": { "text": "Give the bots a seat", "effect": { "funding": -5, "resources": -5, "population": 4, "alien_relations": 4 } },
+    "no": { "text": "Keep the current contract", "effect": { "funding": 5, "resources": -4, "population": -4 } }
+  },
+  {
+    "id": "sponsor_mascot",
+    "character": "BrightSide Beverage Co.",
+    "prompt": "A sponsor funds new water tanks if each is painted with their mascot: a straw wearing sunglasses. The tanks are very large.",
+    "yes": { "text": "Put the straw on the tanks", "effect": { "funding": 10, "resources": -5, "alien_relations": -5 }, "random_outcomes": [{ "chance": 0.18, "text": "The aliens interpret the mascot as a declaration of war against beverages. Negotiations get unusually specific.", "effect": { "funding": -7, "alien_relations": -8 } }] },
+    "no": { "text": "Reject the branding deal", "effect": { "funding": -5, "resources": 5, "population": 2 } }
+  },
+  {
+    "id": "eclipse_rations",
+    "character": "Life-Support Control",
+    "prompt": "A long eclipse cuts solar power for three days. We can ration now or keep normal meals and hope the backup batteries outlast the optimism briefing.",
+    "yes": { "text": "Start the ration plan", "effect": { "resources": 8, "population": -3, "funding": 4 } },
+    "no": { "text": "Keep regular meals", "effect": { "resources": -10, "population": 4, "funding": -4 } }
+  },
+  {
+    "id": "lunar_speedway",
+    "character": "Rover Racing League",
+    "prompt": "Colonists want to race utility rovers around the landing pad. The safety plan is thorough, except for the section titled what if the Moon is dusty.",
+    "yes": { "text": "Approve race night", "effect": { "funding": 10, "population": -3, "resources": -4, "alien_relations": -5 }, "random_outcomes": [{ "chance": 0.17, "text": "A rover kicks up dust that spells the colony name from orbit. Tourism bookings surge; the filters do not.", "effect": { "funding": 8, "resources": -8 } }] },
+    "no": { "text": "Keep rovers on work duty", "effect": { "funding": -4, "population": 4, "resources": -3 } }
+  }
+]
